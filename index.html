@@ -1,37 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Art gallery website</title>
-</head>
-<body>
-hello world
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Outfit:wght@100..900&display=swap');
+    </style>
+    <title>Frontend Mentor | Art gallery website</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Header section -->
+      <header>
+        <div class="grid-item">
+          <picture>
+            <source
+              media="(min-width: 1439px)"
+              srcset="./assets/desktop/image-hero.jpg 1x, ../assets/desktop/image-hero@2x.jpg 2x"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="../assets/tablet/image-hero.jpg 1x, path/to/tablet-image@2x.jpg 2x"
+            />
+            <source srcset="../assets/mobile/image-hero.jpg 1x, ../assets/mobile/image-hero@2x.jpg 2x" />
+            <img src="../assets/mobile/image-hero.jpg" alt="Descriptive text for the image" />
+          </picture>
+        </div>
+        <div class="grid-item with-margin"><h1>Modern Art Gallery</h1></div>
+        <div class="grid-item with-margin">
+          <p class="dark-grey">
+            The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these
+            pieces inspire you? Visit us and find out.
+          </p>
 
-  Modern Art Gallery
+          <button type="button" class="animated-btn">
+            Our location
+            <span class="arrow-bg"></span>
+            <span class="arrow">
+              <svg width="10" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="#FFF" fill="none" d="m1 0 8 12-8 12" />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </header>
+      <!-- Gallery section -->
+      <main>
+        <div class="grid-item with-margin">
+          <picture>
+            <source
+              media="(min-width: 1439px)"
+              srcset="path/to/desktop-image.jpg 1x, path/to/desktop-image@2x.jpg 2x"
+            />
+            <source media="(min-width: 768px)" srcset="path/to/tablet-image.jpg 1x, path/to/tablet-image@2x.jpg 2x" />
+            <source srcset="../assets/mobile/image-grid-1.jpg 1x, ../assets/mobile/image-grid-1@2x.jpg 2x" />
+            <img src="../assets/mobile/image-grid-1.jpg" alt="Descriptive text for the image" />
+          </picture>
+        </div>
+        <div class="grid-item with-margin">
+          <h2>Your day at the gallery</h2>
 
-  The arts in the collection of the Modern Art Gallery all started 
-  from a spark of inspiration. Will these pieces inspire you? Visit 
-  us and find out.
+          <p class="dark-grey">
+            Wander through our distinct collections and find new insights about our artists. Dive into the details of
+            their creative process.
+          </p>
+        </div>
+        <div class="grid-item with-margin">
+          <picture>
+            <source
+              media="(min-width: 1439px)"
+              srcset="path/to/desktop-image.jpg 1x, path/to/desktop-image@2x.jpg 2x"
+            />
+            <source media="(min-width: 768px)" srcset="path/to/tablet-image.jpg 1x, path/to/tablet-image@2x.jpg 2x" />
+            <source srcset="../assets/mobile/image-grid-2.jpg 1x, ../assets/mobile/image-grid-2@2x.jpg 2x" />
+            <img src="../assets/mobile/image-grid-2.jpg" alt="Descriptive text for the image" />
+          </picture>
+        </div>
+        <div class="grid-item with-margin">
+          <picture>
+            <source
+              media="(min-width: 1439px)"
+              srcset="path/to/desktop-image.jpg 1x, path/to/desktop-image@2x.jpg 2x"
+            />
+            <source media="(min-width: 768px)" srcset="path/to/tablet-image.jpg 1x, path/to/tablet-image@2x.jpg 2x" />
+            <source srcset="../assets/mobile/image-grid-3.jpg 1x, ../assets/mobile/image-grid-3@2x.jpg 2x" />
+            <img src="../assets/mobile/image-grid-3.jpg" alt="Descriptive text for the image" />
+          </picture>
+        </div>
+        <div class="grid-item with-margin dark-grid-item">
+          <h2>Come &amp; be inspired</h2>
 
-  Our location
+          <p>We’re excited to welcome you to our gallery and see how our collections influence you.</p>
+        </div>
+      </main>
+    </div>
 
-  Your day at the gallery
-
-  Wander through our distinct collections and find new insights about 
-  our artists. Dive into the details of their creative process.
-
-  Come &amp; be inspired
-
-  We’re excited to welcome you to our gallery and see how our collections 
-  influence you.
-
-  Modern Art Gallery
-
-  The Modern Art Gallery is free to all visitors and open seven days a week 
-  from 8am to 9pm. Find us at 99 King Street, Newport, USA.
-</body>
+    <footer>
+      <h4>Modern Art Gallery</h4>
+      <p id="footer-paragraph">
+        The Modern Art Gallery is free to all visitors <br />and open seven days a week from 8am to<br />
+        9pm. Find us at 99 King Street, Newport, USA.
+      </p>
+      <img src="../assets/icon-facebook.svg" class="social-media-icons" alt="Facebook" />
+      <img src="../assets/icon-instagram.svg" class="social-media-icons" alt="Instagram" />
+      <img src="../assets/icon-twitter.svg" class="social-media-icons" alt="Twitter" />
+    </footer>
+  </body>
 </html>
