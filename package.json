@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-js": "babel src/js -d dist/js",
     "build-css": "postcss src/css/style.css -o dist/css/style.css",
-    "build": "npm run build-js && npm run build-css",
+    "copy-html": "shx cp src/index.html dist/index.html",
+    "copy-assets": "shx cp -r assets dist/assets",
+    "build": "npm run build-js && npm run build-css && npm run copy-html && npm run copy-assets",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
@@ -29,6 +31,12 @@
     "cssnano": "^6.1.2",
     "gh-pages": "^6.1.1",
     "postcss": "^8.4.38",
-    "postcss-cli": "^11.0.0"
+    "postcss-cli": "^11.0.0",
+    "prettier": "^3.2.5",
+    "shx": "^0.3.4"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true
   }
 }
