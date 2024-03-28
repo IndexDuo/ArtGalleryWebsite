@@ -3,7 +3,6 @@
 function adjustBreaks() {
   var breakPoints = document.querySelectorAll('.break');
   if (window.innerWidth < 768) {
-    // Example breakpoint
     breakPoints.forEach(function (point) {
       return point.innerHTML = '<br>';
     });
@@ -15,8 +14,7 @@ function adjustBreaks() {
 }
 function adjustBreaksDesktop() {
   var breakPoints = document.querySelectorAll('.breakDeskTop');
-  if (window.innerWidth > 1068) {
-    // Example breakpoint
+  if (window.innerWidth < 1024) {
     breakPoints.forEach(function (point) {
       return point.innerHTML = '<br>';
     });
