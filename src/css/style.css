@@ -179,29 +179,93 @@ button {
   margin: 0px;
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  .responsive-break {
-    display: block;
-  }
-}
-
 /* Tablet styles */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1439px) {
+  .black-background,
+  .white-background {
+    display: none; /* Hides these dividers in tablet mode */
+  }
   body {
-    font-size: 18px;
-    /* Other tablet-specific styles */
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 20px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+
+  header,
+  main,
+  footer {
+    display: contents; /* Treats children as part of the parent grid */
+  }
+
+  /* Zigzag style adjustments */
+  .header-grid,
+  .gallery-grid,
+  .footer-grid {
+    display: contents; /* This will allow the contents of these containers to participate directly in the parent grid */
+  }
+
+  /* Example to force zigzag pattern */
+  /* Assuming you want every second item to align differently */
+  .grid-item:nth-child(odd) {
+    justify-self: start;
+  }
+
+  .grid-item:nth-child(even) {
+    justify-self: end;
+  }
+
+  /* Adjustments for specific items if needed */
+  #item-1,
+  #item-2,
+  #item-3,
+  #item-4,
+  #item-5 {
+    max-width: 100%;
+  }
+
+  /* Text and button adjustments for better handling on tablets */
+  h1 {
+    font-size: 48px;
+    line-height: 50px;
+    margin: 20px 0;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 42px;
   }
 
   p {
-    font-size: 22px;
-    line-height: 28px;
-    iine-spacing: 32px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  button,
+  .animated-btn {
+    font-size: 18px;
+  }
+
+  .animated-btn .arrow-bg {
+    width: 25%;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  .footer-grid {
+    display: contents; /* Ensures footer elements also align according to the parent grid */
   }
 }
 
 /* Desktop styles */
-@media (min-width: 739px) {
+@media (min-width: 1439px) {
   /* header styles */
   .header-grid {
     display: grid;
